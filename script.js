@@ -88,3 +88,27 @@ console.log(three.aroundOfTheCube());
 // balok
 console.log(three.volumeOfTheBeam());
 console.log(three.aroundOfTheBeam());
+
+// html dom
+
+let button = document.querySelector(".button");
+button.addEventListener("click", getValue);
+button.addEventListener("click", getValueKel);
+
+function getValue() {
+    // input
+    let input = document.querySelector(".sisi").value;
+    const manipulation = new TwoDimentional(input, input);
+    // output
+    let luas = document.querySelector(".luas-persegi-output");
+    return (luas.value = manipulation.squareArea());
+}
+
+function getValueKel() {
+    // input
+    let input = document.querySelector(".sisi").value;
+    const manipulation = new TwoDimentional(input, input);
+    // output
+    let kel = document.querySelector(".kel-persegi-output");
+    return (kel.value = manipulation.aroundTheSquare());
+}
